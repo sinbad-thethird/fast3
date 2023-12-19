@@ -1,5 +1,5 @@
-foodname,country,taste,type,price,avoid,url
-Pad Thai,thai,salty & spicy & umami,one-dish & seafood ,50-100,seafood,https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Phat_Thai_kung_Chang_Khien_street_stall.jpg/1200px-Phat_Thai_kung_Chang_Khien_street_stall.jpg
+csv_data = """foodname,country,taste,type,price,avoid,images
+Pad Thai,thai,salty & spicy & umami,one-dish & seafood ,30-50 or 50-100,seafood,https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Phat_Thai_kung_Chang_Khien_street_stall.jpg/1200px-Phat_Thai_kung_Chang_Khien_street_stall.jpg
 krapao pla,thai,salty umami ,one-dish,50-100,seafood,https://media-cdn.tripadvisor.com/media/photo-s/06/b1/32/32/ad-lib-restaurant.jpg
 krapao kung,thai,salty umami,one-dish,50-100,seafood,https://www.thekitchenabroad.com/wp-content/uploads/2021/03/THAI-BASIL-SHRIMP-STIR-FRY-08-scaled.jpg
 crab fried rice,thai,salty umami,one-dish,50-100,seafood,https://hot-thai-kitchen.com/wp-content/uploads/2020/12/Crab-fried-rice-sq.jpg
@@ -147,3 +147,4 @@ Lasagna,Italian,Savory and Hearty,One-dish,50-100,Pork,https://static01.nyt.com/
 Bruschetta,Italian,Savory and Fresh,Snack,30-50,,https://natashaskitchen.com/wp-content/uploads/2020/07/Tomato-Bruschetta-Recipe-7.jpg
 Caprese Salad,Italian,Fresh and Light,One-dish,50-100,vegetable,https://natashaskitchen.com/wp-content/uploads/2019/08/Caprese-Salad-6.jpg
 Matcha Gelato,Italian,Sweet and Smooth,Dessert,50-100,dessert,https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Gelato.jpg/640px-Gelato.jpg
+"""

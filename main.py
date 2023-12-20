@@ -107,7 +107,7 @@ class FoodRequest2(BaseModel):
     price: str = None
     type: str = None
 
-@app.post("/all")
+@app.post("/recommend")
 def recommend_food(request: FoodRequest2):
     try:
         data = request.dict()

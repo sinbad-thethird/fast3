@@ -7,6 +7,14 @@ import csv
 import random
 from fooddata import csv_data
 app = FastAPI()
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
 
 # Parse CSV data
 csv_lines = csv_data.strip().split('\n')

@@ -115,9 +115,6 @@ header_mapping = {
     'images': 6,
 }
 
-# กำหนดเส้นทางการดำเนินการ
-app = FastAPI()
-
 @app.post("/all")
 def recommend_food(
     avoid: str = None,

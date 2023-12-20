@@ -147,4 +147,5 @@ Lasagna,Italian,Savory and Hearty,One-dish,50-100,Pork,https://static01.nyt.com/
 Bruschetta,Italian,Savory and Fresh,Snack,30-50,,https://natashaskitchen.com/wp-content/uploads/2020/07/Tomato-Bruschetta-Recipe-7.jpg
 Caprese Salad,Italian,Fresh and Light,One-dish,50-100,vegetable,https://natashaskitchen.com/wp-content/uploads/2019/08/Caprese-Salad-6.jpg
 Matcha Gelato,Italian,Sweet and Smooth,Dessert,50-100,dessert,https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Gelato.jpg/640px-Gelato.jpg
+Vegan chicken,chinese,salty,snack,30-50,chicken,https://fullofplants.com/wp-content/uploads/2019/04/the-best-vegan-chickn-shredded-tender-seitan-thumb-1400x1400.jpg
 """

@@ -1,5 +1,5 @@
 csv_data = """foodname,country,taste,type,price,avoid,images
-Pad Thai,thai,salty & spicy & umami,one-dish & seafood ,30-50 or 50-100,seafood,https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Phat_Thai_kung_Chang_Khien_street_stall.jpg/1200px-Phat_Thai_kung_Chang_Khien_street_stall.jpg
+Pad Thai,thai,salty & spicy & umami,one-dish & seafood ,30-100,seafood,https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Phat_Thai_kung_Chang_Khien_street_stall.jpg/1200px-Phat_Thai_kung_Chang_Khien_street_stall.jpg
 krapao pla,thai,salty umami ,one-dish,50-100,seafood,https://media-cdn.tripadvisor.com/media/photo-s/06/b1/32/32/ad-lib-restaurant.jpg
 krapao kung,thai,salty umami,one-dish,50-100,seafood,https://www.thekitchenabroad.com/wp-content/uploads/2021/03/THAI-BASIL-SHRIMP-STIR-FRY-08-scaled.jpg
 crab fried rice,thai,salty umami,one-dish,50-100,seafood,https://hot-thai-kitchen.com/wp-content/uploads/2020/12/Crab-fried-rice-sq.jpg
@@ -29,17 +29,17 @@ Yum Woon Sen,Thai,Spicy and Tangy,Seafood,30-50,,https://thaicaliente.com/wp-con
 Kao Pad Tom Yum,Thai,Spicy and Savory,One-dish,30-50,seafood,https://asianinspirations.com.au/wp-content/uploads/2019/01/R00879_Tom_Yum_Fried_Rice.jpg
 Larb Moo,Thai,Spicy and Tangy,Meat,30-50,pork,https://www.eatingthaifood.com/wp-content/uploads/2014/02/thai-larb-recipe.jpg
 Kai Jeow,Thai,Savory and Crispy,One-dish,30-50,,https://rachelcooksthai.com/wp-content/uploads/2022/08/Kai-Jeow-2.jpg
-Lodchong,Thai,Sweet,dessert,10-30 50-100,dessert,https://miro.medium.com/v2/resize:fit:1200/1*N1l-JwbacwuYzO87LmFFpQ.jpeg
-Bualoy,Thai,Sweet ,Dessert,10-30 & 30-50,dessert,https://www.messyvegancook.com/wp-content/uploads/2010/11/2018-08-817-Edit_HDR.jpeg
+Lodchong,Thai,Sweet,dessert,10-30,dessert,https://miro.medium.com/v2/resize:fit:1200/1*N1l-JwbacwuYzO87LmFFpQ.jpeg
+Bualoy,Thai,Sweet ,Dessert,10-30,dessert,https://www.messyvegancook.com/wp-content/uploads/2010/11/2018-08-817-Edit_HDR.jpeg
 Pla Kapong Neung Manao,Thai,Sour and Spicy,Seafood,100-150,seafood,https://www.eatingthaifood.com/wp-content/uploads/2016/01/thai-steamed-fish-recipe-18.jpg
 Pad Kana Moo Krob,Thai,Salty and Crispy,Meat,50-100,pork,https://hungryinthailand.com/wp-content/uploads/2023/05/pad-kana-moo-krob.webp
 Khao Pad Sapparod,Thai,sour umami,One-dish,30-50,seafood,https://whattocooktoday.com/wp-content/uploads/2013/09/pineapple-fried-rice-26.jpg
 Sashimi,Japanese,Umami,Seafood,100-150,seafood,https://food.fnr.sndimg.com/content/dam/images/food/fullset/2023/3/22/japanese-tuna-and-salmon-sashimi-in-bowl-on-gray-background.jpg.rend.hgtvcom.1280.1280.suffix/1679511773776.jpeg
 Tempura,Japanese,Salty and Crispy,Fry,50-100,seafood,https://thesuburbansoapbox.com/wp-content/uploads/2022/08/STempura-18.jpg
-Ramen,Japanese,Umami salty,Soup noodle,30-50 50-100 ,pork,"https://res.cloudinary.com/jnto/image/upload/w_750,h_450,c_fill,f_auto,fl_lossy,q_60/v1/media/filer_public/e0/3c/e03c7f75-06a7-45ed-920b-dc5d7ad6eb60/mar22_ramen_12_e4tdxz"
+Ramen,Japanese,Umami salty,Soup noodle,30-100,pork,"https://res.cloudinary.com/jnto/image/upload/w_750,h_450,c_fill,f_auto,fl_lossy,q_60/v1/media/filer_public/e0/3c/e03c7f75-06a7-45ed-920b-dc5d7ad6eb60/mar22_ramen_12_e4tdxz"
 Chirashi Sushi,Japanese,Umami,Seafood,100-150,seafood,https://www.justonecookbook.com/wp-content/uploads/2020/02/Chirashi-Sushi-7722-I-1.jpg
 Okonomiyaki,Japanese,Savory and Salty,Fry,50-100,seafood,https://www.spoonforkbacon.com/wp-content/uploads/2021/09/okonomiyaki-recipe-card.jpg
-Miso Soup,Japanese,Umami salty,Soup,10-30 30-50 50-100,vegetable,https://www.justonecookbook.com/wp-content/uploads/2022/06/Miso-Soup-8297-I.jpg
+Miso Soup,Japanese,Umami salty,Soup,30-50,vegetable,https://www.justonecookbook.com/wp-content/uploads/2022/06/Miso-Soup-8297-I.jpg
 Udon,Japanese,Umami salty,Soup noodle,50-100,pork,https://www.justonecookbook.com/wp-content/uploads/2021/11/Beef-Udon-4306-I-500x500.jpg
 curry udon,Japanese,Umami salty,Soup noodle,50-100,pork,https://images.squarespace-cdn.com/content/v1/568e8fe6b204d5cbecd5c77e/7b0234cc-03ea-4bc5-a3cf-405c2edab053/Japanese+Curry+Udon-1550.jpg
 Gyoza,Japanese,Umami and Crispy,Fry,30-50,Pork,"https://assets.epicurious.com/photos/628ba0d3fa016bab2139efa2/1:1/w_4546,h_4546,c_limit/Gyoza_RECIPE_051922_34332.jpg"

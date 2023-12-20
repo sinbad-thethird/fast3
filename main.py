@@ -11,21 +11,18 @@ from io import StringIO
 app = FastAPI()
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["https://fooders.vercel.app"],
+    allow_origins=["*"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
 
 
+
 # Parse CSV data
 csv_lines = csv_data.strip().split('\n')
 csv_reader = csv.DictReader(csv_lines)
 foods = list(csv_reader)
-for row in foods:
-    price_range = row['price']
-    min_price, max_price = map(int, price_range.split('-'))
-    row['price'] = (min_price, max_price)
 
 
 def calculate_similarity(user_input, food):

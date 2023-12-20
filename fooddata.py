@@ -80,7 +80,7 @@ Mapo Tofu,Chinese,Spicy and Umami,One-dish,30-50,vegetable,https://thewoksoflife
 chicken Chow Mein,Chinese,Savory and Crispy,Noodle,50-100,Chicken,https://tiffycooks.com/wp-content/uploads/2023/09/188E6766-B4B4-48FB-80F9-9E7EBA5B6278-scaled.jpg
 Sweet and Sour Pork,Chinese,Sweet and Tangy,Meat,50-100,pork,https://www.kitchensanctuary.com/wp-content/uploads/2021/01/Sweet-and-Sour-Pork-square-FS.jpg
 Spring Rolls,Chinese,Crispy and Fresh,Snack,30-50,,https://www.sugarsaltmagic.com/wp-content/uploads/2023/01/Chinese-Spring-Rolls-4FEAT-500x500.jpg
-Kung Pao Chicken,Chinese,Spicy and Nutty,vegetable Chicken,50-100,Peanuts,https://www.kitchensanctuary.com/wp-content/uploads/2019/10/Kung-Pao-Chicken-square-FS-39-new.jpg
+Kung Pao chicken,Chinese,Spicy and Nutty,Chicken,50-100,Peanuts,https://www.kitchensanctuary.com/wp-content/uploads/2019/10/Kung-Pao-Chicken-square-FS-39-new.jpg
 Szechuan Shrimp,Chinese,Spicy and Savory,Seafood,50-100,seafood,https://omnivorescookbook.com/wp-content/uploads/2021/04/210204_Sichuan-Shrimp-Stir-Fry_550.jpg
 Mongolian Beef,Chinese,Savory and Sweet,Meat,50-100,,https://therecipecritic.com/wp-content/uploads/2023/08/easy-mongolian-beef-1.jpg
 Crab Rangoon,Chinese,Creamy and Crispy,Snack,30-50,seafood,https://christieathome.com/wp-content/uploads/2022/04/Cran-Rangoon-6.jpg

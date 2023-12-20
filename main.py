@@ -7,6 +7,7 @@ import csv
 from fastapi.middleware.cors import CORSMiddleware
 import random
 from fooddata import csv_data
+from io import StringIO
 app = FastAPI()
 app.add_middleware(
     CORSMiddleware,
@@ -21,6 +22,10 @@ app.add_middleware(
 csv_lines = csv_data.strip().split('\n')
 csv_reader = csv.DictReader(csv_lines)
 foods = list(csv_reader)
+for row in foods:
+    price_range = row['price']
+    min_price, max_price = map(int, price_range.split('-'))
+    row['price'] = (min_price, max_price)
 
 
 def calculate_similarity(user_input, food):
@@ -76,19 +81,30 @@ async def find_food(
     return result
 
 
-def filter_food_by_criteria(food_data, user_criteria):
+def filter_food_by_criteria(food_data: str, user_criteria: dict) -> List[dict]:
     # Skip the first line (header) of the CSV file
     filtered_food = [food for i, food in enumerate(csv.reader(food_data.strip().split("\n"))) if i > 0]
 
     for criterion, value in user_criteria.items():
-        if value and criterion != 'avoid':
+        if value and criterion != 'avoid' and criterion != 'price':
             filtered_food = [food for food in filtered_food if isinstance(food, list) and value.lower() in food[header_mapping[criterion]].lower()]
+
+        if value and criterion == 'price':
+            min_price, max_price = map(int, value.split('-'))
+            if isinstance(filtered_food[0][header_mapping[criterion]], list):
+                # กรณีเป็น list
+                filtered_food = [food for food in filtered_food if min_price < int(food[header_mapping[criterion]][0].split('-')[0]) < max_price]
+            else:
+                # กรณีไม่เป็น list
+                filtered_food = [food for food in filtered_food if min_price < int(food[header_mapping[criterion]].split('-')[0]) < max_price]
 
     # Exclude foods based on the 'avoid' criteria
     if user_criteria['avoid']:
         filtered_food = [food for food in filtered_food if isinstance(food, list) and user_criteria['avoid'].lower() not in food[header_mapping['avoid']].lower()]
 
     return filtered_food
+
+# รหัสหัวข้อ
 header_mapping = {
     'foodname': 0,
     'country': 1,
@@ -99,7 +115,9 @@ header_mapping = {
     'images': 6,
 }
 
-# Define the path operation
+# กำหนดเส้นทางการดำเนินการ
+app = FastAPI()
+
 @app.post("/all")
 def recommend_food(
     avoid: str = None,
@@ -117,10 +135,10 @@ def recommend_food(
             'type': type,
         }
 
-        # Filter food based on user criteria
+        # กรองอาหารตามเกณฑ์ผู้ใช้
         recommended_food = filter_food_by_criteria(csv_data, user_criteria)
 
-        # Extract relevant information for the response
+        # แยกข้อมูลที่เกี่ยวข้องสำหรับการตอบสนอง
         response_data = [
             {
                 "foodname": food[header_mapping['foodname']],

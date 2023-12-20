@@ -4,6 +4,7 @@ from fastapi import FastAPI,Query
 from typing import List
 import difflib
 import csv
+from fastapi.middleware.cors import CORSMiddleware
 import random
 from fooddata import csv_data
 app = FastAPI()

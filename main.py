@@ -89,7 +89,6 @@ def filter_food_by_criteria(food_data, user_criteria):
         filtered_food = [food for food in filtered_food if isinstance(food, list) and user_criteria['avoid'].lower() not in food[header_mapping['avoid']].lower()]
 
     return filtered_food
-
 header_mapping = {
     'foodname': 0,
     'country': 1,
@@ -100,23 +99,22 @@ header_mapping = {
     'images': 6,
 }
 
-class FoodRequest2(BaseModel):
-    avoid: str = None
-    country: str = None
-    taste: str = None
-    price: str = None
+# Define the path operation
+@app.post("/all")
+def recommend_food(
+    avoid: str = None,
+    country: str = None,
+    taste: str = None,
+    price: str = None,
     type: str = None
-
-@app.post("/recommend")
-def recommend_food(request: FoodRequest2):
+):
     try:
-        data = request.dict()
         user_criteria = {
-            'avoid': data['avoid'],
-            'country': data['country'],
-            'taste': data['taste'],
-            'price': data['price'],
-            'type': data['type'],
+            'avoid': avoid,
+            'country': country,
+            'taste': taste,
+            'price': price,
+            'type': type,
         }
 
         # Filter food based on user criteria

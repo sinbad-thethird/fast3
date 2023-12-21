@@ -27,7 +27,7 @@ foods = list(csv_reader)
 
 def calculate_similarity(user_input, food):
     # Concatenate values from multiple columns into a single string
-    food_description = f"{food['foodname'].lower()} {food['country'].lower()} {food['taste'].lower()} {food['type'].lower()} {food['price'].lower()}"
+    food_description = f"{food['foodname'].lower()} {food['country'].lower()} {food['taste'].lower()} {food['type'].lower()}"
     # Use difflib to calculate similarity
     similarity_score = difflib.SequenceMatcher(None, user_input, food_description).ratio()
     return similarity_score

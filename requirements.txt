@@ -1,6 +1,7 @@
---upgrade pip
+
 googletrans==4.0.0-rc1
 fastapi==0.70.0
 uvicorn==0.15.0
 httpcore==0.14.0
 spacy==3.0.6
+pip install --upgrade pip

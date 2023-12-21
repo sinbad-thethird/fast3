@@ -194,14 +194,14 @@ banana frappe,,sweet,beverage drink,30-60,dessert,https://tornadoughalli.com/wp-
 thai coconut pancake,thai,sweet,dessert,10-30,dessert,https://images.squarespace-cdn.com/content/v1/560c9d6fe4b081f0a96ec772/1598685184461-DZLY3P90BKPZYHYRFARR/babin-pancake.jpg?format=2500w
 Bread with jam,,sweet,dessert,10-30,,https://monksbread.com/cdn/shop/products/breadJam-1-2_1024x.jpg?v=1594393100
 bacon salad(healthy),italian,savory,salad vegetable,100-150,pork vegetable,https://cleanfoodcrush.com/wp-content/uploads/2020/09/CleanFoodCrush-Healthy-Printable-Recipe-Broccoli-Fresh-Corn-Bacon-Salad.jpg
-pork salad(healthy),italian,savory,salad,100-150,vegetable,https://www.tasteofhome.com/wp-content/uploads/2018/01/Savory-Pork-Salad_EXPS_CF2BZ19_35244_E12_13_2b-4.jpg
+pork salad(healthy),italian,savory,salad,100-150,pork vegetable,https://www.tasteofhome.com/wp-content/uploads/2018/01/Savory-Pork-Salad_EXPS_CF2BZ19_35244_E12_13_2b-4.jpg
 Salmon salad(healthy),italian,savory,salad,100-150,seafood vegetable,https://www.primaverakitchen.com/wp-content/uploads/2020/01/Easy-Chopped-Salmon-Salad-Primavera-Kitchen-1.jpg
 Caesar salad(healthy),italian,savory,salad,100-150,vegetable,https://www.asweetpeachef.com/wp-content/uploads/2010/06/Chicken-Caesar-Salad-17-500x500.jpg
 Strawberry juice(healthy),,sweet,beverage drink,50-100,,https://cdn3.foodviva.com/static-content/food-images/juice-recipes/strawberry-juice-recipe/strawberry-juice-recipe.jpg
 mango juice(healthy),,sweet,beverage drink,50-100,,https://www.theconsciousplantkitchen.com/wp-content/uploads/2022/06/Mango-Juice-9.jpg
 Avocado juice(healthy),,sweet,beverage drink,40-100,,https://cdn.loveandlemons.com/wp-content/uploads/2017/08/avocado-smoothie-recipe.jpg
 Sashimi salad(healthy),japanese,savory,salad,100-150,seafood vegetable,,https://assets.epicurious.com/photos/555cf321644d45515b759070/master/pass/51221630_sashimi-salad-with-soy-orange_6x4.jpg
-Tuna spicy salad(healthy),,spicy,salad,100-150,,https://www.marionskitchen.com/wp-content/uploads/2020/01/Spicy-Thai-style-Tuna-Salad4.jpg
+Tuna spicy salad(healthy),,spicy,salad,100-150,vegetable seafood,https://www.marionskitchen.com/wp-content/uploads/2020/01/Spicy-Thai-style-Tuna-Salad4.jpg
 Tako spicy salad(healthy),,spicy,salad,100-150,seafood vegetable,https://www.eatingbirdfood.com/wp-content/uploads/2021/01/healthy-taco-salad-overhead.jpg
 black coffee,,bitter,beverage drink,30-100,,https://www.sharmispassions.com/wp-content/uploads/2021/05/BlackCoffee4.jpg
 Milk coffee,,mild sweet,beverage drink,30-100,,https://sakiproducts.com/cdn/shop/articles/20230125111927-turkish-coffee-with-milk-recipe-blog_1200x1200.webp?v=1674645576

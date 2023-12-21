@@ -77,27 +77,28 @@ async def find_food(
               for foodname, foodtype, foodprice, foodcountry, images, _ in top_matches]
     return result
 
+def filter_food_by_criteria(data, criteria, header_mapping):
+    filtered_food = [food for i, food in enumerate(csv.reader(data.strip().split("\n"))) if i > 0]
 
-def filter_food_by_criteria(food_data: str, user_criteria: dict) -> List[dict]:
-    # Skip the first line (header) of the CSV file
-    filtered_food = [food for i, food in enumerate(csv.reader(food_data.strip().split("\n"))) if i > 0]
-
-    for criterion, value in user_criteria.items():
-        if value and criterion != 'avoid' and criterion != 'price':
-            filtered_food = [food for food in filtered_food if isinstance(food, list) and value.lower() in food[header_mapping[criterion]].lower()]
+    for criterion, value in criteria.items():
+        if value and criterion != 'price':
+            if criterion == 'avoid':
+                avoid_values = [av.lower() for av in value]
+                filtered_food = [food for food in filtered_food if not any(any(av.lower() in tag.lower() for tag in food[header_mapping['avoid']].split(',')) for av in avoid_values)]
+            elif criterion == 'country':
+                # Improved handling of 'country' criterion (case-insensitive and stripping whitespace)
+                filtered_food = [food for food in filtered_food if isinstance(food, list) and value.lower().strip() in food[header_mapping[criterion]].lower().strip()]
+            else:
+                filtered_food = [food for food in filtered_food if isinstance(food, list) and any(val.lower() in food[header_mapping[criterion]].lower() for val in value.split(','))]
 
         if value and criterion == 'price':
             min_price, max_price = map(int, value.split('-'))
             if isinstance(filtered_food[0][header_mapping[criterion]], list):
-                # กรณีเป็น list
+                # Case when it's a list
                 filtered_food = [food for food in filtered_food if min_price < int(food[header_mapping[criterion]][0].split('-')[0]) < max_price]
             else:
-                # กรณีไม่เป็น list
+                # Case when it's not a list
                 filtered_food = [food for food in filtered_food if min_price < int(food[header_mapping[criterion]].split('-')[0]) < max_price]
-
-    # Exclude foods based on the 'avoid' criteria
-    if user_criteria['avoid']:
-        filtered_food = [food for food in filtered_food if isinstance(food, list) and user_criteria['avoid'].lower() not in food[header_mapping['avoid']].lower()]
 
     return filtered_food
 
@@ -112,13 +113,15 @@ header_mapping = {
     'images': 6,
 }
 
+
+
 @app.post("/all")
 def recommend_food(
-    avoid: str = None,
-    country: str = None,
-    taste: str = None,
-    price: str = None,
-    type: str = None
+    avoid: List[str] = Query([], description="Foods to avoid"),
+    country: str = Query(None, description="Preferred country"),
+    taste: str = Query(None, description="Preferred taste"),
+    price: str = Query(None, description="Preferred price range"),
+    food_type: str = Query(None, description="Preferred food type")
 ):
     try:
         user_criteria = {
@@ -126,13 +129,13 @@ def recommend_food(
             'country': country,
             'taste': taste,
             'price': price,
-            'type': type,
+            'type': food_type,
         }
 
-        # กรองอาหารตามเกณฑ์ผู้ใช้
-        recommended_food = filter_food_by_criteria(csv_data, user_criteria)
+        # Filter food based on user criteria
+        recommended_food = filter_food_by_criteria(csv_data, user_criteria, header_mapping)
 
-        # แยกข้อมูลที่เกี่ยวข้องสำหรับการตอบสนอง
+        # Extract relevant information for the response
         response_data = [
             {
                 "foodname": food[header_mapping['foodname']],

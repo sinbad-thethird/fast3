@@ -8,8 +8,6 @@ from fastapi.middleware.cors import CORSMiddleware
 import random
 from fooddata import csv_data
 from io import StringIO
-import spacy
-from googletrans import Translator
 app = FastAPI()
 app.add_middleware(
     CORSMiddleware,
@@ -19,71 +17,68 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-# Parse CSV data (assuming 'csv_data' is defined somewhere)
+
+
+# Parse CSV data
 csv_lines = csv_data.strip().split('\n')
 csv_reader = csv.DictReader(csv_lines)
 foods = list(csv_reader)
 
-translator = Translator()
-
-
-nlp = spacy.load("en_core_web_md")
 
 def calculate_similarity(user_input, food):
     # Concatenate values from multiple columns into a single string
-    food_description = f"{food['foodname'].lower()} {food['country'].lower()} {food['type'].lower()}"
-    
-    # Calculate similarity using spaCy word embeddings
-    user_input_doc = nlp(user_input)
-    food_doc = nlp(food_description)
-    similarity_score = user_input_doc.similarity(food_doc)
-    
+    food_description = f"{food['foodname'].lower()} {food['country'].lower()} {food['taste'].lower()} {food['type'].lower()} {food['price'].lower()}"
+    # Use difflib to calculate similarity
+    similarity_score = difflib.SequenceMatcher(None, user_input, food_description).ratio()
     return similarity_score
-
-
 @app.post("/recommend")
 async def find_food(
     keyword: str = Query(None, title="General Search Keyword", min_length=1),
     avoid_preference: str = Query(None, title="Avoid Preference"),
 ):
-
+    # Split avoid_preference into a list of individual preferences
     avoid_preferences_list = avoid_preference.lower().split(",") if avoid_preference else []
 
+    # If there's no input for keyword, return 5 random foods without the specified avoid preferences
     if not keyword and avoid_preferences_list:
         foods_without_avoid = [food for food in foods if not any(avoid_pref in food['avoid'].lower() for avoid_pref in avoid_preferences_list)]
         random_foods = random.sample(foods_without_avoid, min(5, len(foods_without_avoid)))
         result = [{"foodname": food['foodname'], "type": food['type'], "price": food['price'], "country": food['country'], "images": food['images']} for food in random_foods]
         return result
 
+    # Filter out foods to avoid
     foods_to_consider = [food for food in foods if not any(avoid_pref in food['avoid'].lower() for avoid_pref in avoid_preferences_list)] if avoid_preference else foods
 
+    # If there's no input for both keyword and avoid_preference, return random 5 foods
     if not keyword and not avoid_preference:
         random_foods = random.sample(foods, 5)
         result = [{"foodname": food['foodname'], "type": food['type'], "price": food['price'], "country": food['country'], "images": food['images']} for food in random_foods]
         return result
 
-    # Translate the keyword to English
-    translated_keyword = translator.translate(keyword, dest='en').text
+    # Convert user input to lowercase
+    user_input = keyword.lower()
 
-    user_input = translated_keyword.lower()
-
+    # Calculate similarity using a more flexible approach
     similarity_scores = [
         (
             food['foodname'],
             food['type'],
             food['price'],
             food['country'],
-            food['images'],
+            food['images'],  # Add 'images' here
             calculate_similarity(user_input, food)
         ) 
         for food in foods_to_consider
     ]
 
+    # Find the top 5 foods with the highest similarity scores
     top_matches = sorted(similarity_scores, key=lambda x: x[5], reverse=True)[:5]
 
+    # Format the results
     result = [{"foodname": foodname, "type": foodtype, "price": foodprice, "country": foodcountry, "images": images}
               for foodname, foodtype, foodprice, foodcountry, images, _ in top_matches]
     return result
+
 
 
 

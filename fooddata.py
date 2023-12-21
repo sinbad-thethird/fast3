@@ -1,5 +1,5 @@
 csv_data = """foodname,country,taste,type,price,avoid,images
-Pad Thai,thai,salty & spicy & umami,one-dish & seafood ,30-100,seafood,https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Phat_Thai_kung_Chang_Khien_street_stall.jpg/1200px-Phat_Thai_kung_Chang_Khien_street_stall.jpg
+Pad thai,thai,salty & spicy & umami,one-dish & seafood ,30-100,seafood,https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Phat_Thai_kung_Chang_Khien_street_stall.jpg/1200px-Phat_Thai_kung_Chang_Khien_street_stall.jpg
 krapao pla,thai,salty umami ,one-dish,50-100,seafood,https://media-cdn.tripadvisor.com/media/photo-s/06/b1/32/32/ad-lib-restaurant.jpg
 krapao kung,thai,salty umami,one-dish,50-100,seafood,https://www.thekitchenabroad.com/wp-content/uploads/2021/03/THAI-BASIL-SHRIMP-STIR-FRY-08-scaled.jpg
 crab fried rice,thai,salty umami,one-dish,50-100,seafood,https://hot-thai-kitchen.com/wp-content/uploads/2020/12/Crab-fried-rice-sq.jpg
@@ -147,4 +147,45 @@ Bruschetta,Italian,Savory and Fresh,Snack,30-50,,https://natashaskitchen.com/wp-
 Caprese Salad,Italian,Fresh and Light,One-dish,50-100,vegetable,https://natashaskitchen.com/wp-content/uploads/2019/08/Caprese-Salad-6.jpg
 Matcha Gelato,Italian,Sweet and Smooth,Dessert,50-100,dessert,https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Gelato.jpg/640px-Gelato.jpg
 Vegan chicken,chinese,salty,snack,30-50,chicken,https://fullofplants.com/wp-content/uploads/2019/04/the-best-vegan-chickn-shredded-tender-seitan-thumb-1400x1400.jpg
+fry chicken,thai,savory,snack,10-50,chicken,https://www.seriouseats.com/thmb/Mdc2XIiGIi9WQpzMc3QGlHO1q7U=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/__opt__aboutcom__coeus__resources__content_migration__serious_eats__seriouseats.com__recipes__images__2012__03__20120314-197278-thai-deep-fried-chicken-primary-4b0561b0ae0d4f6fa9cc9fceae208518.jpg
+new orleans chicken,thai,savory,snack,50-150,chicken,https://www.seriouseats.com/thmb/enKXosffA-Vl-A3YMh9kTVtMu5M=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/cajun-chicken-wings-recipe-hero-03_1-e927580737e24730b053c1c99bcd6a29.JPG
+chocolate frappe,italian,sweet,beverage,30-80,dessert,https://www.whiskaffair.com/wp-content/uploads/2020/08/Chocolate-Chip-Frappe-2-3.jpg
+Katsu curry,japanese,spicy,one-dish,60-150,pork,https://lh6.googleusercontent.com/9ijNJx1Ju7LV8pNO3x1VQU4iOav3HSSEBqpZADVmcLFhKuQ0rdfPwxpy6AVPjWOcDFw-r_jhkGG7Y1AsQIwqIi7obuz4Y0495Z3rkm0s_uBAI9q_aKR3pd0iPM70tQqltbdo2ISN
+coconut chicken curry,thai,spicy,main course,30-60,chicken,https://www.jocooks.com/wp-content/uploads/2019/10/coconut-chicken-curry-1-10.jpg
+katsudon,japanese,savory,one-dish,60-150,pork,https://www.marionskitchen.com/wp-content/uploads/2019/07/Katsudon-01.jpg
+thai fried oysters,thai,savory,one-dish,60-150,seafood,https://1.bp.blogspot.com/-zDYcTZVs7dQ/URIUv0Y2lHI/AAAAAAAAEnc/omoTSXzJm7U/s1600/RIMG4964.JPG
+Ebi fry,japanese,savory,snack,60-100,seafood,https://www.thespruceeats.com/thmb/5xkGMB8ZXz3KGF_y4Uxf7ZfQAvQ=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/ebi-fry-fried-shrimp-2031450-hero-01-46c436a89c164a9ab5980f888097fcd2.jpg
+italian pork burger,italian,savory,snack,60-100,pork,https://www.certifiedangusbeef.com/recipes/images/recipes/3136762e-bb5b-40af-b6a1-fa7380a70c93.jpg
+Italian porkchop,italian,savory,one-dish,50-100,pork,https://lilluna.com/wp-content/uploads/2017/10/italian-pork-chops-resize-4.jpg
+dorayaki,Japan,sweet,dessert,20-50,dessert,https://www.honestfoodtalks.com/wp-content/uploads/2022/02/Dorayaki-recipe-red-bean.jpg
+Thong yod,thai,sweet,dessert,20-40,dessert,https://www.thaifoodplus.com/wp-content/uploads/2017/02/Thong-yot.jpg
+Foi thong,thai,sweet,dessert,20-40,dessert,https://kanomsiam.com/cdn/shop/products/CHEM0490.jpg?v=1589266928
+chocolate cake,,sweet,dessert,60-150,dessert,https://hips.hearstapps.com/hmg-prod/images/chocolate-cake-index-64b83bce2df26.jpg?crop=0.6668359143606668xw:1xh;center,top&resize=1200:*
+ice cream cake,,sweet,dessert,60-150,dessert,https://www.cookingclassy.com/wp-content/uploads/2022/08/ice-cream-cake-11.jpg
+Oreo ice cream cake,,sweet,dessert,60-150,dessert,https://sugargeekshow.com/wp-content/uploads/2021/03/oreo_icecream_cake_recipe_featured.jpg
+Cake roll,,sweet,dessert,20-50,dessert,https://i0.wp.com/smittenkitchen.com/wp-content/uploads//2018/05/ice-cream-cake-roll.jpg?fit=1200%2C800&ssl=1
+cheesecake,,sweet,dessert,70-150,dessert,https://hips.hearstapps.com/hmg-prod/images/strawberry-shortcake-ice-cream-cake-1660592794.jpeg?crop=1xw:0.7973582474226805xh;center,top&resize=1200:*
+berry cheesecake,,sweet,dessert,70-150,dessert,https://i0.wp.com/www.womensweeklyfood.com.au/wp-content/uploads/sites/4/2015/12/09/31196/HL0878-CHRISTMAS-ICE-CREAM-015.jpg?resize=980%2C980&ssl=1
+christmas cake,,sweet,dessert,70-150,dessert,https://food.fnr.sndimg.com/content/dam/images/food/fullset/2021/11/19/Bakery_Inspired_Christmas_Wreath_Layer_Cake_2021_s4x3.jpg.rend.hgtvcom.1280.1280.suffix/1637351961661.jpeg
+chocolate ice cream,,sweet,dessert,10-40,dessert,https://www.cookingclassy.com/wp-content/uploads/2023/07/chocolate-ice-cream-5.jpg
+strawberry ice cream,,sweet,dessert,10-40,dessert,https://www.thespruceeats.com/thmb/kpuMkqk0BhGMTuSENf_IebbHu1s=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/strawberry-ice-cream-10-0b3e120e7d6f4df1be3c57c17699eb2c.jpg
+milk ice cream,,sweet,dessert,10-40,dessert,https://www.wikihow.com/images/e/e4/Make-Ice-Cream-with-Milk-Step-22-Version-2.jpg
+lemon ice cream,,sweet,dessert,10-40,dessert,https://icecreamfromscratch.com/wp-content/uploads/2022/05/Lemon-Ice-Cream-1.2-735x1103.jpg
+strawberry cake,,sweet,dessert,60-150,dessert,https://www.allrecipes.com/thmb/Huh-I63aYc_zZ0NbLECEpFD0BcI=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/60564-StrawberryCakeFromScratch-ddfms-4X3-0291-1-cd8254e28ea14112b5fc49e25cd08ff6.jpg
+strawberry crape,,sweet,dessert,30-70,dessert,https://www.shutterstock.com/image-photo/strawberry-crepes-isolated-on-white-260nw-1182343741.jpg
+sushi salmon,japanese,savory,snack,20-50,seafood,https://izzycooking.com/wp-content/uploads/2020/10/Salmon-Nigiri-thumbnail.jpg
+sashimi,japanese,savory,snack,50-150,seafood,https://images.immediate.co.uk/production/volatile/sites/30/2020/02/sashimi-c123df7.jpg?quality=90&resize=556,505
+Teriyaki chicken,japanese,savory,main course,50-150,chicken,https://static01.nyt.com/images/2016/05/28/dining/28COOKING-CHICKEN-TERIYAKI1/28COOKING-CHICKEN-TERIYAKI1-articleLarge.jpg?w=1280&q=75
+beef sukiyaki,japanese,savory,main course,100-150,,https://www.hairybikers.com/uploads/images/_recipeImage/BeefSukiyaki.jpg
+yakisoba,japanese,savory,one-dish,50-120,vegetable,https://www.jocooks.com/wp-content/uploads/2021/06/yakisoba-1-11.jpg
+saba no shioaki,japanese,savory,one-dish,100-150,seafood,https://sudachirecipes.com/wp-content/uploads/2022/08/saba-no-shioyaki-thumbnail.jpg
+gyudon,japanese,savory,one-dish,100-150,,https://twoplaidaprons.com/wp-content/uploads/2022/09/gyudon-in-bowl-thumbnail.jpg
+KFC Wing zab chicken,thai,savory,snack,30-50,chicken,https://i.pinimg.com/originals/4a/44/9f/4a449fe9f13bd5a30d1c6477b5660b0b.jpg
+italian cheeseburger,italian,savory,one-dish,100-150,pork,https://www.joyfulhealthyeats.com/wp-content/uploads/2015/05/Italian-Cheeseburger-23-Joyful-Healthy-Eats-041823.jpg
+japanese hamburger,japanese,savory,one-dish,100-150,pork,https://www.justonecookbook.com/wp-content/uploads/2020/06/Japanese-Hamburger-Steak-Hambagu-1214-I-1-500x375.jpg
+Espresso coffee,,bitter,beverage drink,40-100,,https://www.aromathailand.com/wp-content/uploads/2023/04/Cover-Espresso-1080x675.jpg
+Café Americano,,bitter,beverage drink,40-100,,https://ajnownirun.files.wordpress.com/2015/02/americano.jpg
+Latte,,sweet & bitter,beverage drink,40-100,,https://www.foodandwine.com/thmb/CCe2JUHfjCQ44L0YTbCu97ukUzA=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/Partners-Latte-FT-BLOG0523-09569880de524fe487831d95184495cc.jpg
+Strawberry frappe,,sweet,beverage drink,60-120,dessert,https://shottbeverages.com/wp-content/uploads/2020/08/strawberry_frappe.jpg
+Oreo frappe,,sweet,beverage drink,60-120,dessert,https://myveganminimalist.com/wp-content/uploads/2021/12/Oreo-Frappe-DIY-6-Ingredient-Chocolate-Frappuccino-2.jpg
 """

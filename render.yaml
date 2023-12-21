@@ -5,3 +5,5 @@ services:
       python -m pip install --upgrade pip
       python -m pip install -r requirements.txt
     startCommand: gunicorn -b 0.0.0.0:$PORT main:app
+builds:
+  - python: 3.8

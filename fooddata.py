@@ -188,4 +188,29 @@ Café Americano,,bitter,beverage drink,40-100,,https://ajnownirun.files.wordpres
 Latte,,sweet & bitter,beverage drink,40-100,,https://www.foodandwine.com/thmb/CCe2JUHfjCQ44L0YTbCu97ukUzA=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/Partners-Latte-FT-BLOG0523-09569880de524fe487831d95184495cc.jpg
 Strawberry frappe,,sweet,beverage drink,60-120,dessert,https://shottbeverages.com/wp-content/uploads/2020/08/strawberry_frappe.jpg
 Oreo frappe,,sweet,beverage drink,60-120,dessert,https://myveganminimalist.com/wp-content/uploads/2021/12/Oreo-Frappe-DIY-6-Ingredient-Chocolate-Frappuccino-2.jpg
+orange juice,thai,sour,beverage drink,30-50,,https://upload.wikimedia.org/wikipedia/commons/0/05/Orangejuice.jpg
+watermelon juice,thai,sweet,beverage drink,30-50,,https://www.thatcutedish.com/wp-content/uploads/2023/06/frozen-watermelon-juice-korean-style-1.jpg
+banana frappe,thai,sweet,beverage drink,30-60,dessert,https://tornadoughalli.com/wp-content/uploads/2017/07/Banana-Cream-Frappe3-2.jpg
+thai coconut pancake,thai,sweet,dessert,10-30,dessert,https://images.squarespace-cdn.com/content/v1/560c9d6fe4b081f0a96ec772/1598685184461-DZLY3P90BKPZYHYRFARR/babin-pancake.jpg?format=2500w
+Bread with jam,,sweet,dessert,10-30,,https://monksbread.com/cdn/shop/products/breadJam-1-2_1024x.jpg?v=1594393100
+bacon salad(healthy),italian,savory,salad vegetable,100-150,pork vegetable,https://cleanfoodcrush.com/wp-content/uploads/2020/09/CleanFoodCrush-Healthy-Printable-Recipe-Broccoli-Fresh-Corn-Bacon-Salad.jpg
+pork salad(healthy),italian,savory,salad,100-150,vegetable,https://www.tasteofhome.com/wp-content/uploads/2018/01/Savory-Pork-Salad_EXPS_CF2BZ19_35244_E12_13_2b-4.jpg
+Salmon salad(healthy),italian,savory,salad,100-150,seafood vegetable,https://www.primaverakitchen.com/wp-content/uploads/2020/01/Easy-Chopped-Salmon-Salad-Primavera-Kitchen-1.jpg
+Caesar salad(healthy),italian,savory,salad,100-150,vegetable,https://www.asweetpeachef.com/wp-content/uploads/2010/06/Chicken-Caesar-Salad-17-500x500.jpg
+Strawberry juice(healthy),,sweet,beverage drink,50-100,,https://cdn3.foodviva.com/static-content/food-images/juice-recipes/strawberry-juice-recipe/strawberry-juice-recipe.jpg
+mango juice(healthy),,sweet,beverage drink,50-100,,https://www.theconsciousplantkitchen.com/wp-content/uploads/2022/06/Mango-Juice-9.jpg
+Avocado juice(healthy),,sweet,beverage drink,40-100,,https://cdn.loveandlemons.com/wp-content/uploads/2017/08/avocado-smoothie-recipe.jpg
+Sashimi salad(healthy),japanese,savory,salad,100-150,seafood vegetable,,https://assets.epicurious.com/photos/555cf321644d45515b759070/master/pass/51221630_sashimi-salad-with-soy-orange_6x4.jpg
+Tuna spicy salad(healthy),,spicy,salad,100-150,,https://www.marionskitchen.com/wp-content/uploads/2020/01/Spicy-Thai-style-Tuna-Salad4.jpg
+Tako spicy salad(healthy),,spicy,salad,100-150,seafood vegetable,https://www.eatingbirdfood.com/wp-content/uploads/2021/01/healthy-taco-salad-overhead.jpg
+black coffee,,bitter,beverage drink,30-100,,https://www.sharmispassions.com/wp-content/uploads/2021/05/BlackCoffee4.jpg
+Milk coffee,,mild sweet,beverage drink,30-100,,https://sakiproducts.com/cdn/shop/articles/20230125111927-turkish-coffee-with-milk-recipe-blog_1200x1200.webp?v=1674645576
+bubble milk tea,,sweet,beverage drink,25-100,dessert,https://assets.epicurious.com/photos/629f98926e3960ec24778116/4:3/w_4658,h_3493,c_limit/BubbleTea_RECIPE_052522_34811.jpg
+milk iced tea,,mild sweet,beverage drink,25-100,dessert,https://brewedleaflove.com/wp-content/uploads/2023/03/milk-tea-without-boba.jpg
+ice green tea latte,,mild sweet,beverage drink,25-100,dessert,https://www.starbucks.co.th/stb-media/2020/08/81.Iced-Green-Tea-Latte1080.png
+thai iced tea,thai,sweet,beverage drink,25-100,dessert,https://sakiproducts.com/cdn/shop/articles/20230310181037-thai-tea-recipe_1200x1200.webp?v=1678471844
+hot coco,,sweet,beverage drink,30-100,dessert,https://feelgoodfoodie.net/wp-content/uploads/2021/11/how-to-make-hot-chocolate-7.jpg
+Milkshake,,sweet,beverage drink,40-100,dessert,https://preppykitchen.com/wp-content/uploads/2021/04/Milkshake-Recipe-Card.jpg
+Caramel milkshake,,sweet,beverage drink,45-100,dessert,https://bakingmischief.com/wp-content/uploads/2020/04/caramel-milkshake-image-square.jpg
+lemon juice(healthy),,sweet,beverage drink,30-100,,https://hips.hearstapps.com/hmg-prod/images/lemon-juice-royalty-free-image-510180395-1531432390.jpg?crop=1.00xw:0.717xh;0,0.157xh&resize=640:*
 """

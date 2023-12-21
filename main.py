@@ -31,21 +31,23 @@ def calculate_similarity(user_input, food):
     # Use difflib to calculate similarity
     similarity_score = difflib.SequenceMatcher(None, user_input, food_description).ratio()
     return similarity_score
-
 @app.post("/recommend")
 async def find_food(
     keyword: str = Query(None, title="General Search Keyword", min_length=1),
     avoid_preference: str = Query(None, title="Avoid Preference"),
 ):
-    # If there's no input for keyword, return 5 random foods without the specified avoid preference
-    if not keyword and avoid_preference:
-        foods_without_avoid = [food for food in foods if avoid_preference.lower() not in food['avoid'].lower()]
+    # Split avoid_preference into a list of individual preferences
+    avoid_preferences_list = avoid_preference.lower().split(",") if avoid_preference else []
+
+    # If there's no input for keyword, return 5 random foods without the specified avoid preferences
+    if not keyword and avoid_preferences_list:
+        foods_without_avoid = [food for food in foods if not any(avoid_pref in food['avoid'].lower() for avoid_pref in avoid_preferences_list)]
         random_foods = random.sample(foods_without_avoid, min(5, len(foods_without_avoid)))
         result = [{"foodname": food['foodname'], "type": food['type'], "price": food['price'], "country": food['country'], "images": food['images']} for food in random_foods]
         return result
 
     # Filter out foods to avoid
-    foods_to_consider = [food for food in foods if avoid_preference.lower() not in food['avoid'].lower()] if avoid_preference else foods
+    foods_to_consider = [food for food in foods if not any(avoid_pref in food['avoid'].lower() for avoid_pref in avoid_preferences_list)] if avoid_preference else foods
 
     # If there's no input for both keyword and avoid_preference, return random 5 foods
     if not keyword and not avoid_preference:
@@ -77,13 +79,17 @@ async def find_food(
               for foodname, foodtype, foodprice, foodcountry, images, _ in top_matches]
     return result
 
+
+
+
+
 def filter_food_by_criteria(data, criteria, header_mapping):
     filtered_food = [food for i, food in enumerate(csv.reader(data.strip().split("\n"))) if i > 0]
 
     for criterion, value in criteria.items():
         if value and criterion != 'price':
             if criterion == 'avoid':
-                avoid_values = [av.lower() for av in value]
+                avoid_values = [av.lower() for av in value.split(',')]
                 filtered_food = [food for food in filtered_food if not any(any(av.lower() in tag.lower() for tag in food[header_mapping['avoid']].split(',')) for av in avoid_values)]
             elif criterion == 'country':
                 # Improved handling of 'country' criterion (case-insensitive and stripping whitespace)
@@ -113,11 +119,9 @@ header_mapping = {
     'images': 6,
 }
 
-
-
 @app.post("/all")
 def recommend_food(
-    avoid: List[str] = Query([], description="Foods to avoid"),
+    avoid: str = Query(None, description="Foods to avoid, use comma as separator"),
     country: str = Query(None, description="Preferred country"),
     taste: str = Query(None, description="Preferred taste"),
     price: str = Query(None, description="Preferred price range"),

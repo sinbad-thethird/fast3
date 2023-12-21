@@ -19,12 +19,12 @@ Khao Soi,Thai,Creamy and Spicy,One-dish,50-100,Chicken,https://hot-thai-kitchen.
 Pla Rad Prik,Thai,Spicy and Salty,Seafood,100-150,seafood,https://importfood.com/images/com_yoorecipe/22/plaradprik_8l.jpg
 Kai Med Ma Muang,Thai,salty and spicy,Meat,30-50,Chicken,https://asianinspirations.com.au/wp-content/uploads/2019/01/R00890_Stir_Fried_Chicken_with_Cashew_Nuts.jpg
 Yam Talay,Thai,Spicy and Sour,Seafood,50-100,seafood,https://importfood.com/images/cropped-yumtalay3l.jpg
-Khao Niew  Moo Ping,Thai,Sweet and Sticky,Dessert,30-50,,https://www.marionskitchen.com/wp-content/uploads/2023/05/Thai-Moo-Ping-14.jpg
+Khao Niew  Moo Ping,Thai,Sweet and Sticky,snack,30-50,pork,https://www.marionskitchen.com/wp-content/uploads/2023/05/Thai-Moo-Ping-14.jpg
 Pla Pao,Thai,Salty and Grilled,Seafood,100-150,seafood,https://asianinspirations.com.au/wp-content/uploads/2018/07/R00695_Pla-Pao.jpg
 Larb Gai,Thai,Spicy and Tangy,One-dish,30-50,Chicken,https://img.taste.com.au/MDi8O9zz/taste/2016/11/larb-gai-with-mint-and-basil-83035-1.jpeg
-Tod Mun Pla,Thai,Spicy and Crispy,Snack,100-150,,https://thaicaliente.com/wp-content/uploads/2021/10/Fish-Cake-Feature.jpg
-Green Mango Salad,Thai,Sour and Spicy,Snack,100-150,,https://littlespicejar.com/wp-content/uploads/2023/04/Thai-Mango-Salad-8-735x1103.jpg
-Khao Man Gai,Thai,Savory and Ginger,One-dish,30-50,,https://www.thespruceeats.com/thmb/bGeARnS56XAFr1DgyFxe_gpSusA=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/thai-khao-man-gai-4767706-hero-01-08fec21125fe4d3bbd00d53ab95de058.jpg
+Tod Mun Pla,Thai,Spicy and Crispy,Snack,100-150,seafood,https://thaicaliente.com/wp-content/uploads/2021/10/Fish-Cake-Feature.jpg
+Green Mango Salad,Thai,Sour and Spicy,Snack,100-150,vegetable,https://littlespicejar.com/wp-content/uploads/2023/04/Thai-Mango-Salad-8-735x1103.jpg
+Khao Man Gai,Thai,Savory and Ginger,One-dish,30-50,chicken,https://www.thespruceeats.com/thmb/bGeARnS56XAFr1DgyFxe_gpSusA=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/thai-khao-man-gai-4767706-hero-01-08fec21125fe4d3bbd00d53ab95de058.jpg
 Yum Woon Sen,Thai,Spicy and Tangy,Seafood,30-50,,https://thaicaliente.com/wp-content/uploads/2021/08/Yum-Woon-Sen-Feature.jpg
 Kao Pad Tom Yum,Thai,Spicy and Savory,One-dish,30-50,seafood,https://asianinspirations.com.au/wp-content/uploads/2019/01/R00879_Tom_Yum_Fried_Rice.jpg
 Larb Moo,Thai,Spicy and Tangy,Meat,30-50,pork,https://www.eatingthaifood.com/wp-content/uploads/2014/02/thai-larb-recipe.jpg
